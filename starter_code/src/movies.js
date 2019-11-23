@@ -3,6 +3,7 @@
 /* eslint no-restricted-globals: 'off' */
 
 // Iteration 1: Ordering by year - Order by year, ascending (in growing order)
+<<<<<<< HEAD
 function orderByYear(array) {
 
     let copy = [...array];
@@ -29,6 +30,83 @@ function howManyMovies(array) {
 }
 // Iteration 3: Alphabetic Order - Order by title and print the first 20 titles
 function orderAlphabetically(array) {
+=======
+function orderByYear(array){
+
+    let copy=[...array];
+    
+    copy.sort((a, b) => {
+        return a.year - b.year;
+        })
+       
+      
+    
+      movies.sort((a, b) => {
+        return a.year - b.year;
+        })
+       
+      movies.sort(orderByYear(a, b) =>{
+        if (a.year - b.year == 0) { 
+            if (a.title < b.title) { 
+                return -1;
+            }
+            if (a.title < b.title) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        return a.year - b.year; 
+    })
+    
+    
+  
+// Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct
+
+// function howMnayMovies(anArray){
+//     if(genre =="drama" && director == "steven speilberg"){
+//         return
+//     }
+// }
+// function howManyYears(anArray){
+//     anArray.filter(check(anArray));
+// }
+
+// Iteration 3: Alphabetic Order - Order by title and print the first 20 titles
+
+
+function orderAlphabetically(array){
+
+    let copy = [...array];
+    
+      copy.sort( (a, b) =>{
+        if(a.title < b.title){
+          return -1;
+        }
+        else if( b.title < a.title){
+          return 1;
+        }
+        else {
+          return 0;
+        }
+      })
+    
+      let first20 = copy.slice(0, 20) ;
+    
+    
+    
+      return first20;
+    
+    
+    }
+
+
+
+
+
+
+>>>>>>> 20af707f088507ace04ec1bf9872baba6ed738bf
 
     let newAr = array.map(function (movies) {
         return movies.title;
